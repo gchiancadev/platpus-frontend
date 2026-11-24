@@ -1,0 +1,75 @@
+Pagina cadastro:
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="vietport" content="width=device-width initial-scale=1">
+        <title>PlatPlus// - Cadastro</title>
+        <link rel="stylesheet" href="pasta do CSS">
+        <script src="pasta do java"></script>
+    </head>
+    <body class="pagina-cadastro">
+        <main class="cartao-acesso">
+            <header>
+                <a class="marca" href="index.html">PlatPluss// - Login</a>
+                <h1>Criar Acesso</h1>
+                <p>Efetue cadastro na plataforma para acompanhar os projetos e grupos da departamento de estagio da Eniac</p>
+            </header>
+
+            <form id="form-cadastro" method="post">
+                <fieldset>
+                    <legend>Seus dados</legend>
+
+                    <label for="cad-nome">Nome completo</label>
+                    <input type="texte" id="cad-nome" name="nome" autocomplete="name" required>
+
+                    <label for="cad-ra">RA ou Matricul</label>
+                    <input type="text" id="cad-ra" name="ra" autocomplete="numeric" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Papel na plataforma</legend>
+
+                    <label for="card-cargo">Cargo</label>
+                    <select id="card-cargo" name="Cargo" aria-describedby="ajuda-cargo" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="coordenador">Coordenador</option>
+                        <option value="PMO" >Gestor PMO</option>
+                    </select>
+
+                    <label for="card-area">Área de atuação</label>
+                    <select id="card-area" name="area">
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="banco-dados">Banco de dados</option>
+                        <option value="dev">Desenvolvedor</option>
+                        <option value="prog">Programador</option>
+                    </select>
+
+                    <label for="cad-titulo">Titulo</label>
+                    <input id="cad-titulo" type="text" name="titulo" maxlength="30" aria-describedby="ajuda-titulo">
+                    <small id="ajuda-titulo">Um apelido ligado ao seu jeito de trabalhar. Ex.:
+                        "Guardião dos Prazos"</small>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Senha</legend>
+
+                    <label for="cad-senha">Senha</label>
+                    <input type="password" name="senha" id="cad-senha" autocomplete="new-password" required>
+                    <small id="cad-senha">Minimo de 8 caracters</small>
+
+                    <label for="cad-senha2">Confirme a senha</label>
+                    <input id="cad-senha2" type="password" name="senha-confirmada" autocomplete="new-password" required>
+                </fieldset>
+
+                <p class="legenda-obrigatorio">Campos Obrigatorios</p>
+                <div class="acoes-formularios">  
+                    <button class="btn-cancelar" onclick="window.location.href='index.html'">Cancelar</button>
+                    <button type="submit" class="btn-enviar">Criar acesso</button>
+                </div>
+
+                <p id="sucesso-cadastro" class="mensagem-sucesso" role="status" hidden>Cadastro efetuado</p>               
+            </form>
+        </main>
+    </body>
+</html>
