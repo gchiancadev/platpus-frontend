@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pessoas Platpus</title>
+</head>
+<body>
+
+    <header class="cabecalho-pagina">
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="pessoas.html" aria-current="page">
+                        Pessoas
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <h1>Pessoas</h1>
+
+        <div class="acoes-pagina">
+            <a class="btn btn-primario"
+               href="pessoas-form.html"
+               data-papel="coordenador gestor">
+                Cadastrar
+            </a>
+        </div>
+
+    </header>
+
+    <form class="filtros"
+          role="search"
+          action="pessoas.html"
+          method="get">
+
+        <label for="busca-pessoa">Buscar pessoa</label>
+        <input
+            type="search"
+            id="busca-pessoa"
+            name="q"
+            placeholder="Digite um nome..."
+        >
+
+        <label for="filtro-papel">Papel</label>
+        <select id="filtro-papel" name="papel">
+            <option value="">Todos</option>
+            <option value="coordenador">Coordenador</option>
+            <option value="gestor">Gestor</option>
+            <option value="colaborador">Colaborador</option>
+        </select>
+
+        <label for="filtro-grupo">Grupo</label>
+        <select id="filtro-grupo" name="grupo">
+            <option value="">Todos</option>
+            <option value="sem">Sem grupo</option>
+        </select>
+
+        <button type="submit">Filtrar</button>
+    </form>
+    <table class="tabela">
+    <caption>Clique no nome para abrir o perfil</caption>
+    <thead>
+        <th scope="cool">Nome</th>
+        <th scope="cool">Ra e Matricula</th>
+        <th scope="cool">Papel</th>
+        <th scope="cool">Grupo</th>
+    </thead>
+    <tr>
+        <td><a href="pessoa-perfil.html">Ana Beatriz</a></td>
+        <td>202601</td>
+        <td>Colaborador</td>
+        <td>Grupo A</td>
+      </tr>
+      <tr>
+        <td><a href="pessoa-perfil.html">Mariana Reis</a></td>
+        <td>202602</td>
+        <td>Colaborador</td>
+        <td>Sem grupo</td>
+      </tr>
+      <tr>
+        <td><a href="pessoa-perfil.html">Eduardo Faria</a></td>
+        <td>100310</td>
+        <td>Gestor PMO</td>
+        <td>Grupo B</td>
+      </tr>
+      <tr>
+        <td><a href="pessoa-perfil.html">Rita Moura</a></td>
+        <td>100001</td>
+        <td>Coordenador</td>
+        <td>&mdash;</td>
+      </tr>
+    </tbody>
+  </table>
+</main>
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </table>
+
+</body>
+</html>
