@@ -1,0 +1,48 @@
+Pagina login:
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PlatPlus// - Acesso</title>
+    <link rel="stylesheet" href="pasta do CSS">
+    <script src="pasta do java"></script>
+    </head>
+    <body class="pagina-login">
+        <main class="login">
+            <section class="login-marca">
+                <img src="caminho da pasta" alt="Logo PlatPlus//">
+                <h1>PlatPlus</h1>
+                <p>Eniac - Departamento de Estagio</p>
+                <img class="login-foto" src="caminho da pasta" alt="Fachada da Eniac">
+            </section>
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------->
+            <section class="login-form" aria-labelledby="titulo-acesso">
+                <h2 id="titulo-acesso">Acessar a plataforma</h2>
+                <form id="form-login" method="post"> <!---Metodo carta - Post faz com que os dados nao fiquem visiveis no navegador-->
+
+                    <label for="usuario">Acesso</label>
+                    <input type="password" id="usuario" name="usuario" placeholder="Matricula/RA" required>
+                    
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Senha de acesso" required>
+
+                    <label class="opcao">
+                        <input type="checkbox" id="mostrar-senha"> Mostrar senha
+                    </label>
+
+                    <p id="erro-login" class="mensagem-erro-login" role="alert" hidden>Usuario ou senha incorreta</p>
+
+                    <button class="btn-acesso" type="submit">Entrar</button>
+                    <button class="btn-cadastro" onclick="window.location.href='cadastro.html'">Cadastrar</button>
+                    <button class="btn-esqueceu-senha" onclick="window.location.href='recuperar-senha.html'">Esqueceu a senha?</button>
+                </form>
+            </section>
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------->
+            <footer class="rodape-login">
+                <img src="Pasta da imagem de rodapé" alt="Rodape da pagina">
+                <p>Eniac - Equipe de Desenvolvedores 2026 - Guarulhos - SP</p>
+            </footer>
+        </main>
+    </body>
+</html>
