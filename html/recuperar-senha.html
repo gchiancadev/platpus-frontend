@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>PlatPlus// - Recuperar Senha</title>
+        <link rel="stylesheet" href="pasta do CSS">
+        <script src="pasta do java"></script>
+    </head>
+    <body class"pagina-acesso">
+        <main class="cartao-acesso">
+            <header>
+                <a class="marca" href="index.html">PlatPluss// - Login</a>
+                <h1>Recuperar Senha</h1>
+                <p>Informe seu RA, numero de telefone que enviaremos a senha para vc. Lembrando, só irá funcionar para
+                    logins cadastrados na plataforma.</p>
+            </header>
+            <fieldset>
+                <legend>Informação de recuperação</legend>
+
+                <form id="form-recuperar" method="post">
+                    <label for="recuperar-ra">RA ou Matricula</label>
+                    <input type="text" id="recuperar-ra" name="ra" autocomplete="numeric" required>
+                </form>
+
+                <form id="form-recuperar-num" method="post">
+                    <label for="recuperar-num">Numero de telefone</label>
+                    <input type="text" id="recuperar-num" name="telefone" autocomplete="numeric" placeholder="Ex: 11999999999" required>
+                </form>
+            </fieldset>
+
+            <p id="sucesso-recuperar" class="mensagem-sucesso" role="alert" hidden>Senha enviada com sucesso!</p>
+        </main>
+
+        <button class="btn-cancelar" onclick="window.location.href='index.html'">Cancelar</button>
+    </body>
+</html>
