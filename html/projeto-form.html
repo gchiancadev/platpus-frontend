@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo projeto - Platplus</title>
+
+</head>
+<body>
+    
+  <header class="cabecalho-pagina">
+  <h1>Novo projeto</h1>
+  <div class="acoes-pagina">
+    <a class="btn btn-secundario" href="projetos.html">Fechar</a>
+  </div>
+</header>
+ 
+<form id="form-projeto" class="formulario" method="post">
+  <p class="legenda-obrigatorio">Campos com * são obrigatórios.</p>
+ 
+  <label for="proj-nome">Nome do projeto *</label>
+  <input type="text" id="proj-nome" name="nome" placeholder="Ex.: Painel de estágios"
+      required>
+ 
+  <label for="proj-setor">Setor *</label>
+  <select id="proj-setor" name="setor" required>
+    <option value="" disabled selected>Selecionar</option>
+    <option value="estagio">Estágio</option>
+    <option value="pmo">PMO</option>
+    <option value="ti">Tecnologia</option>
+    <option value="secretaria">Secretaria</option>
+  </select>
+
+  <label for="proj-inicio">Início *</label>
+<input type="date" id="proj-inicio" name="inicio" required>
+ 
+<label for="proj-prazo">Prazo de entrega *</label>
+<input type="date" id="proj-prazo" name="prazo" required>
+ 
+<label for="proj-responsavel">Responsável *</label>
+<input type="text" id="proj-responsavel" name="responsavel"
+       list="lista-pessoas" placeholder="Buscar pessoa" required>
+<datalist id="lista-pessoas">
+  <option value="Ana Beatriz"></option>
+  <option value="Carla Dias"></option>
+  <option value="Eduardo Faria"></option>
+  <option value="Gabriel Hora"></option>
+</datalist>
+ <label for="proj-grupo">Grupo (opcional)</label>
+      <select id="proj-grupo" name="grupo">
+        <option value="" selected>Sem grupo por enquanto</option>
+        <option value="a">Grupo A</option>
+        <option value="b">Grupo B</option>
+        <option value="c">Grupo C</option>
+        <option value="d">Grupo D</option>
+      </select>
+ 
+      <label for="proj-descricao">Descrição</label>
+      <textarea id="proj-descricao" name="descricao" rows="4"
+                placeholder="Objetivo e entregas principais"></textarea>
+ 
+      <div class="acoes-formulario">
+        <a class="btn btn-secundario" href="projetos.html">Cancelar</a>
+        <button class="btn btn-primario" type="submit">Criar projeto</button>
+      </div>
+    </form>
+  </main>
+
+
+</body>
+</html>

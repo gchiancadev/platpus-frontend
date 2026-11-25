@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto #1798 - Platplus</title>
+</head>
+
+
+<body>
+   
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+            <li><a href="relatorios.html">Relatorios</a></li>
+        </ul>
+    </nav>
+
+<main>
+    
+<header class="cabecalho-pagina">
+    <p class="trilha"><a href="projetos.html">Projetos</a> / #1798</p>
+    <h1>Projeto A <small>#1798</small></h1>
+    <span class="status status-em-dia">Em dia</span>
+    <div class="acoes-pagina">
+        <a class="btn btn-secundario" href="projeto-form.html?id=1798"
+            data-papel="cordenador gestor">Editar</a>
+        <details class="menu-exportar">
+            <summary>Exportar</summary>
+            <ul>
+                <li><button type="button" data-forma="pdf">PDF</button></li>
+                <li><button type="button" data-forma="png">PNG</button></li>
+                <li><button type="button" data-forma="csv">CSV</button></li>
+            </ul>
+        </details>
+    </div>
+</header>
+</main>
+    <nav class="abas" aria-label="Seções do projeto">
+  <ul>
+    <li><a href="#visao-geral" aria-current="true">Visão geral</a></li>
+    <li><a href="#sprints">Sprints</a></li>
+    <li><a href="#equipe">Equipe</a></li>
+    <li><a href="#kanban">Kanban</a></li>
+    <li><a href="#arquivos">Arquivos</a></li>
+  </ul>
+</nav>
+
+<section id="visao-geral" class="aba-conteudo" aria-labelledby="titulo-visao">
+    <h2 id="titulo-visao">Visão Geral</h2>
+
+    <article class="cartao">
+    <h3>Progresso</h3>
+    <progress value="50" max="100">50%</progress>
+    <p><strong>50%</strong>  Sprint 2 de 3 em andamento</p>
+</article>
+
+<article class="cartao">
+    <h3>Saúde da sprint</h3>
+    <dl class="lista-dados">
+        <dt>Entregues</dt><dd>6</dd>
+        <dt>Atrasados</dt><dd>1</dd>
+        <dt>No praso</dt><dd>4</dd>
+    </dl>
+</article>
+
+<article class="cartao">
+    <h3>Detalhes</h3>
+    <dl class="lista-dados">
+        <dt>Início</dt><dd><time datetime="2026-20-11">11/10/2026</time></dd>
+        <dt>Entrega</dt><dd><time datetime="2026-12-20">20/12/2026</time></dd>
+        <dt>Responsável</dt><dd><a href="pessoas-perfil.html">Carla Dias</a></dd>
+        <dt>Setor</dt><dd>Estágio</dd>
+        <dt>Grupo</dt><dd><a href="grupo-detalhe.html">Grupo A</a></dd>
+        <dt>Integrantes</dt><dd>6</dd>
+    </dl>
+</article>
+</section>
+
+<section id="sprints" class="aba-conteudo" aria-labelledby="titulo-sprints">
+  <h2 id="titulo-sprints">Sprints</h2>
+  <table class="tabela">
+    <thead>
+      <tr>
+        <th scope="col">Sprint</th>
+        <th scope="col">Período</th>
+        <th scope="col">Status</th>
+        <th scope="col">Entregues</th>
+        <th scope="col">Atrasadas</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Sprint 1</th>
+        <td>11/10 a 25/10</td>
+        <td><span class="status status-concluido">Concluído</span></td>
+        <td>5</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <th scope="row">Sprint 2</th>
+        <td>26/10 a 22/11</td>
+        <td><span class="status status-em-dia">Em dia</span></td>
+        <td>6</td>
+        <td>1</td>
+        </tr>
+      <tr>
+        <th scope="row">Sprint 3</th>
+        <td>23/11 a 06/12</td>
+        <td><span class="status status-nao-iniciado">Não iniciado</span></td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="equipe" class="aba-conteudo" aria-labelledby="titulo-equipe">
+  <h2 id="titulo-equipe">Equipe</h2>
+  <ul class="lista-pessoas">
+    <li><a href="pessoa-perfil.html">Carla Dias</a> · Gestor PMO</li>
+    <li><a href="pessoa-perfil.html">Ana Beatriz</a> · Líder do grupo</li>
+    <li><a href="pessoa-perfil.html">Gabriel Hora</a> · Colaborador</li>
+    <li><a href="pessoa-perfil.html">Ester Fontes</a> · Colaborador</li>
+  </ul>
+</section>
+
+<section id="kanban" class="aba-conteudo" aria-labelledby="titulo-kanban">
+  <h2 id="titulo-kanban">Kanban</h2>
+ 
+  <label for="filtro-sprint">Sprint</label>
+  <select id="filtro-sprint" name="sprint">
+    <option value="1">Sprint 1</option>
+    <option value="2" selected>Sprint 2</option>
+    <option value="3">Sprint 3</option>
+  </select>
+ 
+  <div class="quadro-kanban">
+ 
+    <section class="coluna-kanban" data-etapa="backlog" aria-labelledby="col-backlog">
+      <h3 id="col-backlog">Backlog <span class="contador">2</span></h3>
+      <ol>
+        <li>
+          <article class="cartao-tarefa" draggable="true">
+            <h4>Tarefa 1</h4>
+            <p><abbr title="Ana Beatriz">AB</abbr> · <time
+                datetime="2026-12-02">02/12</time></p>
+            <span class="prioridade prioridade-baixa">Baixa</span>
+          </article>
+        </li>
+        <li>
+          <article class="cartao-tarefa" draggable="true">
+            <h4>Tarefa 2</h4>
+            <p><abbr title="Carla Dias">CD</abbr> · <time
+                datetime="2026-12-05">05/12</time></p>
+            <span class="prioridade prioridade-baixa">Baixa</span>
+          </article>
+        </li>
+      </ol>
+    </section>
+ 
+    <section class="coluna-kanban" data-etapa="a-fazer" aria-labelledby="col-afazer">
+      <h3 id="col-afazer">A fazer <span class="contador">1</span></h3>
+      <ol>
+        <li>
+          <article class="cartao-tarefa" draggable="true">
+            <h4>Tarefa 3</h4>
+            <p><abbr title="Ester Fontes">EF</abbr> · <time
+                datetime="2026-11-28">28/11</time></p>
+            <span class="prioridade prioridade-media">Média</span>
+          </article>
+        </li>
+      </ol>
+    </section>
+
+    <section class="coluna-kanban" data-etapa="em-andamento"
+        aria-labelledby="col-andamento">
+      <h3 id="col-andamento">Em andamento <span class="contador">2</span></h3>
+      <ol>
+        <li>
+          <article class="cartao-tarefa" draggable="true">
+            <h4>Tarefa 4</h4>
+            <p><abbr title="Ana Beatriz">AB</abbr> · <time
+                datetime="2026-11-25">25/11</time></p>
+            <span class="prioridade prioridade-alta">Alta</span>
+          </article>
+        </li>
+        <li>
+          <article class="cartao-tarefa" draggable="true">
+            <h4>Tarefa 5</h4>
+            <p><abbr title="Gabriel Hora">GH</abbr> · <time
+                datetime="2026-11-27">27/11</time></p>
+            <span class="prioridade prioridade-media">Média</span>
+          </article>
+        </li>
+      </ol>
+    </section>
+
+     <section class="coluna-kanban" data-etapa="concluido" aria-labelledby="col-concluido">
+      <h3 id="col-concluido">Concluído <span class="contador">1</span></h3>
+      <ol>
+        <li>
+          <article class="cartao-tarefa" draggable="true">
+            <h4>Tarefa 6</h4>
+            <p><abbr title="Carla Dias">CD</abbr> · <time
+                datetime="2026-11-18">18/11</time></p>
+            <span class="prioridade prioridade-feito">Feito</span>
+          </article>
+        </li>
+      </ol>
+    </section>
+ 
+  </div>
+</section>
+
+<section id="arquivos" class="aba-conteudo" aria-labelledby="titulo-arquivos">
+      <h2 id="titulo-arquivos">Arquivos</h2>
+      <ul class="lista-arquivos">
+        <li><a href="#">escopo-projeto-a.pdf</a> · enviado por Carla Dias em <time
+            datetime="2026-10-11">11/10</time></li>
+        <li><a href="#">cronograma-sprints.xlsx</a> · enviado por Ana Beatriz em <time
+            datetime="2026-10-26">26/10</time></li>
+      </ul>
+ 
+      <form class="formulario-anexo" method="post" enctype="multipart/form-data">
+        <label for="anexo">Anexar arquivo</label>
+        <input type="file" id="anexo" name="anexo" accept=".pdf,.png,.jpg,.xlsx,.docx">
+        <button class="btn btn-secundario" type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+        
+</body>
+</html>
