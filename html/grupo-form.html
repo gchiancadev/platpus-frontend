@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo grupo · PlastPlus   </title>
+</head>
+<body>
+    <li><a href="grupos.html" arial-current="page">Grupo</a></li>
+    <header class="cabecalho-pagina">
+      <h1>Novo grupo</h1>
+      <div class="acoes-pagina">
+        <a class="btn btn-secundario" href="grupos.html">Fechar</a>
+      </div>
+    </header>
+ 
+    <form id="form-grupo" class="formulario" method="post">
+      <p class="legenda-obrigatorio">Campos com * são obrigatórios.</p>
+ 
+      <label for="grp-nome">Nome do grupo *</label>
+      <input type="text" id="grp-nome" name="nome" placeholder="Ex.: Grupo E" required>
+ 
+      <label for="grp-lider">Líder *</label>
+      <select id="grp-lider" name="lider" required>
+        <option value="" disabled selected>Selecionar pessoa</option>
+        <option value="ana">Ana Beatriz</option>
+        <option value="bruna">Bruna Lima</option>
+        <option value="daniel">Daniel Costa</option>
+
+            <label for="grp-projeto">Projeto alocado</label>
+      <select id="grp-projeto" name="projeto">
+        <option value="" selected>Sem projeto por enquanto</option>
+        <option value="1798">#1798 · Projeto A</option>
+        <option value="1802">#1802 · Projeto B</option>
+        <option value="1795">#1795 · Projeto C</option>
+      </select>
+ 
+      <label for="grp-capacidade">Capacidade (integrantes) *</label>
+      <input type="number" id="grp-capacidade" name="capacidade" min="1" max="12"
+          value="8" required>
+ 
+      <div class="acoes-formulario">
+        <a class="btn btn-secundario" href="grupos.html">Cancelar</a>
+        <button class="btn btn-primario" type="submit">Criar grupo</button>
+      </div>
+    </form>
+  </main>
+ 
+</body>
+</html>
