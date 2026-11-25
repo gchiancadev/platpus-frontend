@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+<<<<<<< Updated upstream
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -25,10 +26,37 @@
         <div class="acoes-pagina">
             <a class="btn btn-primario"
                href="pessoas-form.html"
+=======
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pessoas · Platpus</title>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="pessoas.html" aria-label="Página Pessoas">
+                    Pessoas
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="cabecalho-pagina">
+        <h1>Pessoas</h1>
+
+        <div class="acoes-paginas">
+            <a class="btn-primario"
+               href="pessoas.form.html"
+>>>>>>> Stashed changes
                data-papel="coordenador gestor">
                 Cadastrar
             </a>
         </div>
+<<<<<<< Updated upstream
 
     </header>
 
@@ -50,10 +78,35 @@
             <option value="">Todos</option>
             <option value="coordenador">Coordenador</option>
             <option value="gestor">Gestor</option>
+=======
+    </header>
+
+    <form class="filtros" role="search"
+          action="pessoas.html" method="get">
+
+        <label for="busca-pessoa">
+            Buscar por nome ou RA
+        </label>
+
+        <input
+            type="search"
+            name="busca"
+            id="busca-pessoa"
+            placeholder="Digite um nome ou RA"
+        >
+
+        <label for="filtro-papel">Filtrar por papel</label>
+
+        <select name="papel" id="filtro-papel">
+            <option value="">Todos</option>
+            <option value="coordenador">Coordenador</option>
+            <option value="gestor">Gestor PMO</option>
+>>>>>>> Stashed changes
             <option value="colaborador">Colaborador</option>
         </select>
 
         <label for="filtro-grupo">Grupo</label>
+<<<<<<< Updated upstream
         <select id="filtro-grupo" name="grupo">
             <option value="">Todos</option>
             <option value="sem">Sem grupo</option>
@@ -110,6 +163,19 @@
     
     
     </table>
+=======
+
+        <select name="grupo" id="filtro-grupo">
+            <option value="">Todos</option>
+            <option value="a">Grupo A</option>
+            <option value="b">Grupo B</option>
+            <option value="sem">Sem grupo</option>
+        </select>
+
+        <button type="submit">Buscar</button>
+
+    </form>
+>>>>>>> Stashed changes
 
 </body>
 </html>
