@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,57 +8,88 @@
     <link rel="stylesheet" href="pasta do CSS">
     <script src="pasta do java"></script>
 </head>
-    <body class="pagina-interna">
-        <a class="pular-contudo" href="#conteudo">Pular para o conteudo</a>
-        <header class="barra-superior">
-            <a class="marca" href="dashboard">
-                <img src="caminho da pasta" alt="Logo PlatPlus//">
-                <span>PlatPlus</span>
-            </a>
 
-            <form class="buscar-global" role="search" action="#" method="get">
-                <label for="buscar-global">Buscar em toda plataforma</label>
-                <input type="search" id="buscar-global" name="q" placeholder="ID, Aluno ou Projeto">
-                <button type="submit">Buscar</button>
-            </form>
+<body class="pagina-interna">
+    <a class="pular-contudo" href="#conteudo">Pular para o conteudo</a>
+    <header class="barra-superior">
+        <a class="marca" href="dashboard">
+            <img src="caminho da pasta" alt="Logo PlatPlus//">
+            <span>PlatPlus</span>
+        </a>
 
-            <a class="alertas" href="notificacoes.html">Alerta <span class="contador">3</span></a>
-            <a class="avatar" href="configuracoes.html" title="Meu Perfil">AB</a>
+        <form class="buscar-global" role="search" action="#" method="get">
+            <label for="buscar-global">Buscar em toda plataforma</label>
+            <input type="search" id="buscar-global" name="q" placeholder="ID, Aluno ou Projeto">
+            <button type="submit">Buscar</button>
+        </form>
+
+        <a class="alertas" href="notificacoes.html">Alerta <span class="contador">3</span></a>
+        <a class="avatar" href="configuracoes.html" title="Meu Perfil">AB</a>
+    </header>
+
+    <nav class="menu-lateral" aria-label="Menu lateral">
+        <ul>
+            <li><a href="dashboard.html" arial-current="page">Dashboard</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="grupos.html">Grupos</a></li>
+            <li><a href="pessoas.html">Pessoas</a></li>
+            <li><a href="notificacoes.html">Notificações</a></li>
+            <li><a href="configuracoes.html">Configurações</a></li>
+        </ul>
+
+        <div class="menu-rodape">
+            <button type="button" id="btn-tema">Tema: Claro - Escuro</button>
+            <button type="button" id="btn-recolher-menu" aria-label="Recolher menu">Recolher</button>
+        </div>
+    </nav>
+
+    <main id="conteudo">
+        <header class="cabecalho-pagina">
+            <hi>Dashboard</hi>
+            <div class="acoes-pagina">
+                <a class="btn-primario" href="#">+ Ação Principal</a>
+            </div>
         </header>
 
-        <nav class="menu-lateral" aria-label="Menu lateral">
-            <ul>
-                <li><a href="dashboard.html" arial-current="page">Dashboard</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="grupos.html">Grupos</a></li>
-                <li><a href="pessoas.html">Pessoas</a></li>
-                <li><a href="notificacoes.html">Notificações</a></li>
-                <li><a href="configuracoes.html">Configurações</a></li>
-            </ul>
-
-            <div class="menu-rodape">
-                <button type="button" id="btn-tema">Tema: Claro - Escuro</button>
-                <button type="button" id="btn-recolher-menu" aria-label="Recolher menu">Recolher</button>
+        <header class="cabecalho-pagina">
+            <h1>Dashboard</h1>
+            <div class="acoes-pagina">
+                <a class="btn-primario" href="projetos.html" data-papel="coordenador gestor">+ Ação Principal</a>
+                <a class="btn-secundario" href="gripo-form.html" data-papel="coordenador gestor">+ Equipe</a>
             </div>
-        </nav>
+        </header>
 
-        <main id="conteudo">
-            <header class="cabecalho-pagina">
-                <hi>Dashboard</hi>
-                <div class="acoes-pagina">
-                    <a class="btn-primario" href="#">+ Ação Principal</a>
-                </div>
-            </header>
+        <form class="buscar-pagina" role="search" action="projetos.html" method="get">
+            <label for="buscar-dashoboard">Buscar por ID, Aluno ou Projeto</label>
+            <input type="search" id="buscar-dashboard" name="q" placeholder="Ex.: #15678">
+            <button type="submit">Buscar</button>
+        </form>
 
-            <header class="cabecalho-pagina">
-                <h1>Dashboard</h1>
-                <div class="acoes-pagina">
-                    <a class="btn-primario" href="projetos.html" data-papel="coordenador gestor">+ Ação Principal</a>
-                    <a class="btn-secundario" href="gripo-form.html" data-papel="coordenador gestor">+ Equipe</a>
+        <section arial-labelledby="titulo-resumo">
+            <h2 id="titulo-resumo">Resumo</h2>
+            <ul class="card-resumo">
+                <li>
+                    <a class="card-resumo" href="projetos.html?filtro=ativo">
+                        <strong class="numero">12</strong>
+                        <span>Projetos Ativos</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="card-resumo" href="grupos.html">
+                        <strong class="numero">4</strong>
+                        <span>Grupos Formados</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="card-resumo" href="projetos.html?filtro=pendentes">
+                        <strong class="numero">9</strong>
+                        <span>Projetos Pendentes</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
 
-                </div>
+    </main>
+</body>
 
-            </header>
-        </main>
-    </body>
 </html>
