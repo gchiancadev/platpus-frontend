@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - PlatPlus</title>
+    
+</head>
+
+
+
+<body>
+
+   <nav aria-label="Menu principal">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+      <li><a href="relatorios.html">Relatórios</a></li>
+    </ul>
+  </nav>
+
+<main>
+  
+  <header class="cabecalho-pagina">
+  <h1>Projetos</h1>
+  <div class="acoes-pagina">
+    <details class="menu-exportar">
+      <summary>Exportar</summary>
+      <ul>
+        <li><button type="button" data-formato="pdf">PDF</button></li>
+        <li><button type="button" data-formato="png">PNG</button></li>
+        <li><button type="button" data-formato="csv">CSV</button></li>
+      </ul>
+    </details>
+    <a class="btn btn-primario" href="projeto-form.html"
+        data-papel="coordenador gestor">+ Criar projeto</a>
+  </div>
+</header>
+
+<form class="filtros" role="search" action="projetos.html" method="get">
+  <label for="busca-projeto">Buscar projeto</label>
+  <input type="search" id="busca-projeto" name="q" placeholder="Nome ou ID">
+ 
+  <label for="filtro-grupo">Grupo</label>
+  <select id="filtro-grupo" name="grupo">
+    <option value="">Todos os grupos</option>
+    <option value="a">Grupo A</option>
+    <option value="b">Grupo B</option>
+    <option value="c">Grupo C</option>
+    <option value="d">Grupo D</option>
+  </select>
+ 
+  <label for="filtro-gestor">Gestor PMO</label>
+  <select id="filtro-gestor" name="gestor">
+    <option value="">Todos os gestores</option>
+    <option value="carla">Carla Dias</option>
+    <option value="eduardo">Eduardo Faria</option>
+  </select>
+ 
+  <fieldset class="alternar-visao">
+    <legend>Visualização</legend>
+    <label><input type="radio" name="visao" value="lista" checked> Lista</label>
+    <label><input type="radio" name="visao" value="icones"> Ícones</label>
+  </fieldset>
+  <button type="submit">Aplicar filtros</button>
+</form>
+
+<div class="abas-filtro" role="group" aria-label="Filtrar por situação">
+  <button type="button" aria-pressed="true">Todos</button>
+  <button type="button" aria-pressed="false">Em andamento</button>
+  <button type="button" aria-pressed="false">Atrasados</button>
+  <button type="button" aria-pressed="false">Concluídos</button>
+</div>
+
+<section id="visao-lista" aria-labelledby="titulo-lista">
+  <h2 id="titulo-lista">Lista de projetos</h2>
+  <table class="tabela">
+    <caption>Clique no cabeçalho para ordenar</caption>
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Projeto</th>
+        <th scope="col">Status</th>
+        <th scope="col">Responsável</th>
+        <th scope="col">Progresso</th>
+        <th scope="col">Prazo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>#1798</td>
+        <td><a href="projeto-detalhe.html">Projeto A</a></td>
+        <td><span class="status status-em-dia">Em dia</span></td>
+        <td>Carla Dias</td>
+        <td><progress value="50" max="100">50%</progress> 50%</td>
+        <td><time datetime="2026-12-20">20/12/2026</time></td>
+      </tr>
+      <tr>
+        <td>#1802</td>
+        <td><a href="projeto-detalhe.html">Projeto B</a></td>
+        <td><span class="status status-atencao">Atenção</span></td>
+        <td>Eduardo Faria</td>
+        <td><progress value="25" max="100">25%</progress> 25%</td>
+        <td><time datetime="2026-12-15">15/12/2026</time></td>
+      </tr>
+      <tr>
+        <td>#1795</td>
+        <td><a href="projeto-detalhe.html">Projeto C</a></td>
+        <td><span class="status status-critico">Crítico</span></td>
+        <td>Carla Dias</td>
+        <td><progress value="10" max="100">10%</progress> 10%</td>
+        <td><time datetime="2026-12-12">12/12/2026</time></td>
+      </tr>
+      <tr>
+        <td>#1780</td>
+        <td><a href="projeto-detalhe.html">Projeto D</a></td>
+        <td><span class="status status-concluido">Concluído</span></td>
+        <td>Eduardo Faria</td>
+        <td><progress value="100" max="100">100%</progress> 100%</td>
+        <td><time datetime="2026-11-01">01/11/2026</time></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+ <section id="visao-icones" aria-labelledby="titulo-icones" hidden>
+      <h2 id="titulo-icones">Projetos em cartões</h2>
+      <ul class="grade-cartoes">
+        <li>
+          <a class="cartao-projeto" href="projeto-detalhe.html">
+            <article>
+              <h3>Projeto A <small>#1798</small></h3>
+              <span class="status status-em-dia">Em dia</span>
+              <progress value="50" max="100">50%</progress>
+              <p>50% concluído · Prazo <time datetime="2026-12-20">20/12</time></p>
+            </article>
+          </a>
+        </li>
+        <li>
+          <a class="cartao-projeto" href="projeto-detalhe.html">
+            <article>
+              <h3>Projeto B <small>#1802</small></h3>
+              <span class="status status-atencao">Atenção</span>
+              <progress value="25" max="100">25%</progress>
+              <p>25% concluído · Prazo <time datetime="2026-12-15">15/12</time></p>
+            </article>
+          </a>
+        </li>
+        <li>
+          <a class="cartao-projeto" href="projeto-detalhe.html">
+            <article>
+                 <h3>Projeto C <small>#1795</small></h3>
+              <span class="status status-critico">Crítico</span>
+              <progress value="10" max="100">10%</progress>
+              <p>10% concluído · Prazo <time datetime="2026-12-12">12/12</time></p>
+            </article>
+          </a>
+        </li>
+        <li>
+          <a class="cartao-projeto" href="projeto-detalhe.html">
+            <article>
+              <h3>Projeto D <small>#1780</small></h3>
+              <span class="status status-concluido">Concluído</span>
+              <progress value="100" max="100">100%</progress>
+              <p>100% concluído · Entregue <time datetime="2026-11-01">01/11</time></p>
+            </article>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+</body>
+</html>
