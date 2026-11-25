@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo A · PlastPlus</title>
+</head>
+<body>
+    <li><a href="grupos.html" aria-current="page">Grupos</a></li>
+<header class="cabecalho-pagina">
+  <p class="trilha"><a href="grupos.html">Grupos</a> / Grupo A</p>
+  <h1>Grupo A</h1>
+  <span class="status status-em-dia">Em dia</span>
+  <p class="capacidade">
+    <meter min="0" max="8" value="6">6 de 8</meter> 6 de 8 integrantes
+  </p>
+</header>
+ 
+<nav class="abas" aria-label="Seções do grupo">
+  <ul>
+    <li><a href="#visao-geral" aria-current="true">Visão geral</a></li>
+    <li><a href="#sprint">Sprint</a></li>
+    <li><a href="#equipe">Equipe</a></li>
+  </ul>
+</nav>
+<section id="visao-geral" class="aba-conteudo" aria-labelledby="titulo-visao">
+  <h2 id="titulo-visao">Visão geral</h2>
+  <dl class="lista-dados">
+    <dt>Projeto alocado</dt><dd><a href="projeto-detalhe.html">#1798 · Projeto A</a></dd>
+    <dt>Gestor PMO</dt><dd>Carla Dias</dd>
+    <dt>Líder</dt><dd>Ana Beatriz</dd>
+    <dt>Tarefas entregues na sprint</dt><dd>6</dd>
+    <dt>Tarefas atrasadas na sprint</dt><dd>1</dd>
+  </dl>
+</section>
+ 
+<section id="sprint" class="aba-conteudo" aria-labelledby="titulo-sprint">
+  <h2 id="titulo-sprint">Sprint atual</h2>
+  <p>Sprint 2 do projeto #1798 · <time datetime="2026-10-26">26/10</time> a <time
+      datetime="2026-11-22">22/11</time></p>
+  <progress value="55" max="100">55%</progress>
+  <p>55% das tarefas da sprint concluídas.</p>
+</section>
+    <section id="equipe" class="aba-conteudo" aria-labelledby="titulo-equipe">
+      <h2 id="titulo-equipe">Equipe</h2>
+ 
+      <div class="area-alocacao">
+        <figure class="organograma">
+          <figcaption>Organograma do Grupo A</figcaption>
+          <ul>
+            <li>
+              <span class="no-organograma">Carla Dias · Gestor PMO</span>
+              <ul>
+                <li>
+                  <span class="no-organograma">Ana Beatriz · Líder do grupo</span>
+                  <ul class="zona-soltar" data-grupo="a">
+                    <li draggable="true">Gabriel Hora</li>
+                    <li draggable="true">Ester Fontes</li>
+                    <li draggable="true">Igor Santos</li>
+                    <li draggable="true">Júlia Melo</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </figure>
+                <aside class="sem-grupo" aria-labelledby="titulo-sem-grupo">
+          <h3 id="titulo-sem-grupo">Sem grupo</h3>
+          <ul>
+            <li draggable="true">Mariana Reis</li>
+            <li draggable="true">Otávio Nunes</li>
+          </ul>
+          <p class="dica">Arraste uma pessoa para o organograma para alocá-la.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+ 
+</body>
+</html>
