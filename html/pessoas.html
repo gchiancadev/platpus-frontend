@@ -1,16 +1,19 @@
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pessoas Platpus</title>
+
+    <title>Pessoas · Platpus</title>
 </head>
+
 <body>
 
     <header class="cabecalho-pagina">
 
-        <nav>
+        <nav aria-label="Navegação principal">
             <ul>
                 <li>
                     <a href="pessoas.html" aria-current="page">
@@ -23,93 +26,133 @@
         <h1>Pessoas</h1>
 
         <div class="acoes-pagina">
-            <a class="btn btn-primario"
-               href="pessoas-form.html"
-               data-papel="coordenador gestor">
+            <a
+                class="btn btn-primario"
+                href="pessoas-form.html"
+                data-papel="coordenador gestor"
+            >
                 Cadastrar
             </a>
         </div>
 
     </header>
 
-    <form class="filtros"
-          role="search"
-          action="pessoas.html"
-          method="get">
+    <main>
 
-        <label for="busca-pessoa">Buscar pessoa</label>
-        <input
-            type="search"
-            id="busca-pessoa"
-            name="q"
-            placeholder="Digite um nome..."
+        <!-- Formulário de filtros -->
+        <form
+            class="filtros"
+            role="search"
+            action="pessoas.html"
+            method="get"
         >
 
-        <label for="filtro-papel">Papel</label>
-        <select id="filtro-papel" name="papel">
-            <option value="">Todos</option>
-            <option value="coordenador">Coordenador</option>
-            <option value="gestor">Gestor</option>
-            <option value="colaborador">Colaborador</option>
-        </select>
+            <label for="busca-pessoa">
+                Buscar por nome ou RA
+            </label>
 
-        <label for="filtro-grupo">Grupo</label>
-        <select id="filtro-grupo" name="grupo">
-            <option value="">Todos</option>
-            <option value="sem">Sem grupo</option>
-        </select>
+            <input
+                type="search"
+                name="busca"
+                id="busca-pessoa"
+                placeholder="Digite um nome ou RA"
+            >
 
-        <button type="submit">Filtrar</button>
-    </form>
-    <table class="tabela">
-    <caption>Clique no nome para abrir o perfil</caption>
-    <thead>
-        <th scope="cool">Nome</th>
-        <th scope="cool">Ra e Matricula</th>
-        <th scope="cool">Papel</th>
-        <th scope="cool">Grupo</th>
-    </thead>
-    <tr>
-        <td><a href="pessoa-perfil.html">Ana Beatriz</a></td>
-        <td>202601</td>
-        <td>Colaborador</td>
-        <td>Grupo A</td>
-      </tr>
-      <tr>
-        <td><a href="pessoa-perfil.html">Mariana Reis</a></td>
-        <td>202602</td>
-        <td>Colaborador</td>
-        <td>Sem grupo</td>
-      </tr>
-      <tr>
-        <td><a href="pessoa-perfil.html">Eduardo Faria</a></td>
-        <td>100310</td>
-        <td>Gestor PMO</td>
-        <td>Grupo B</td>
-      </tr>
-      <tr>
-        <td><a href="pessoa-perfil.html">Rita Moura</a></td>
-        <td>100001</td>
-        <td>Coordenador</td>
-        <td>&mdash;</td>
-      </tr>
-    </tbody>
-  </table>
-</main>
+            <label for="filtro-papel">
+                Filtrar por papel
+            </label>
 
+            <select name="papel" id="filtro-papel">
+                <option value="">Todos</option>
+                <option value="coordenador">Coordenador</option>
+                <option value="gestor">Gestor PMO</option>
+                <option value="colaborador">Colaborador</option>
+            </select>
 
+            <label for="filtro-grupo">
+                Filtrar por grupo
+            </label>
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    </table>
+            <select name="grupo" id="filtro-grupo">
+                <option value="">Todos</option>
+                <option value="sem">Sem grupo</option>
+                <option value="grupo-a">Grupo A</option>
+                <option value="grupo-b">Grupo B</option>
+            </select>
+
+            <button type="submit">
+                Filtrar
+            </button>
+
+        </form>
+
+        <!-- Tabela de pessoas -->
+        <table class="tabela">
+
+            <caption>
+                Clique no nome para abrir o perfil
+            </caption>
+
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">RA e Matrícula</th>
+                    <th scope="col">Papel</th>
+                    <th scope="col">Grupo</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>
+                        <a href="pessoa-perfil.html">
+                            Ana Beatriz
+                        </a>
+                    </td>
+                    <td>202601</td>
+                    <td>Colaborador</td>
+                    <td>Grupo A</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <a href="pessoa-perfil.html">
+                            Mariana Reis
+                        </a>
+                    </td>
+                    <td>202602</td>
+                    <td>Colaborador</td>
+                    <td>Sem grupo</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <a href="pessoa-perfil.html">
+                            Eduardo Faria
+                        </a>
+                    </td>
+                    <td>100310</td>
+                    <td>Gestor PMO</td>
+                    <td>Grupo B</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <a href="pessoa-perfil.html">
+                            Rita Moura
+                        </a>
+                    </td>
+                    <td>100001</td>
+                    <td>Coordenador</td>
+                    <td>&mdash;</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </main>
 
 </body>
 </html>
